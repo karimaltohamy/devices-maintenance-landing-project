@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap");
+header {
+  padding: 12px 0;
+}
+header .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .line .logo img {
+  width: 135px;
+}
+header .line .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+header .line .links .link {
+  font-size: 17px;
+  font-weight: 600;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header .line .links .link.active {
+  color: #0379ff !important;
+}
+header .line .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+header .line .info .lang_list {
+  position: relative;
+}
+header .line .info .lang_list .head {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+}
+header .line .info .lang_list .head img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+header .line .info .lang_list .head span {
+  font-weight: 600;
+}
+header .line .info .lang_list .list {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  padding: 8px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 3px 9px rgb(206, 208, 221);
+          box-shadow: 0px 3px 9px rgb(206, 208, 221);
+  min-width: 170px;
+  z-index: 5;
+  background-color: white;
+  display: none;
+  color: black;
+}
+header .line .info .lang_list .list.active {
+  display: block;
+}
+header .line .info .lang_list .list.list2 {
+  z-index: 15;
+}
+header .line .info .lang_list .list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+}
+header .line .info .lang_list .list .item:not(:last-child) {
+  margin-bottom: 15px;
+}
+header .line .info .lang_list .list .item img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+header .line .info .lang_list .list .title {
+  font-size: 22px;
+  font-weight: 500;
+}
+header .line .info .lang_list .list .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+header .line .info .lang_list .list .profile img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+header .line .info .lang_list .list .profile .text .name {
+  font-weight: 500;
+}
+header .line .info .lang_list .list .profile .text .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  color: gray;
+  margin-top: 4px;
+}
+header .line .info .btn_contact {
+  background-color: #0379ff;
+  color: white !important;
+  padding: 7px 25px;
+  border-radius: 50px;
+}
+header .line .info .icon_menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 0;
+  }
+  header .line .logo img {
+    width: 100px;
+  }
+  header .line .info {
+    gap: 10px;
+  }
+  header .line .info .links {
+    display: none;
+  }
+  header .line .info .lang_list {
+    display: none;
+  }
+  header .line .info .btn_contact {
+    padding: 5px 11px;
+    font-size: 12px;
+  }
+  header .line .info .icon_menu {
+    cursor: pointer;
+    display: block;
+  }
+  header .line .info .icon_menu svg {
+    width: 25px;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden !important;
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Cairo", sans-serif !important;
+  overflow-x: hidden !important;
+  direction: rtl !important;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+svg {
+  width: 20px;
+}
