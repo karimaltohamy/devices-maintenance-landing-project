@@ -3,6 +3,8 @@
 // start header
 header {
   padding: 12px 0;
+  position: relative;
+  z-index: 99;
 
   .line {
     display: flex;
@@ -21,11 +23,12 @@ header {
       gap: 15px;
 
       .link {
-        font-size: 17px;
-        font-weight: 600;
+        font-size: 20px;
+        font-weight: 700;
         transition: all 0.3s;
 
-        &.active {
+        &.active,
+        &:hover {
           color: $main-color !important;
         }
       }
@@ -129,10 +132,53 @@ header {
       }
 
       .btn_contact {
-        background-color: #0379ff;
-        color: white !important;
-        padding: 7px 25px;
-        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 40px;
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.5s ease-in;
+        z-index: 1;
+      }
+
+      .btn_contact::before,
+      .btn_contact::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 0;
+        height: 100%;
+        transform: skew(15deg);
+        transition: all 0.5s;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      .btn_contact::before {
+        left: -10px;
+        background: #080046;
+      }
+
+      .btn_contact::after {
+        right: -10px;
+        background: $primary-color;
+      }
+
+      .btn_contact:hover::before,
+      .btn_contact:hover::after {
+        width: 58%;
+      }
+
+      .btn_contact:hover span {
+        transition: 0.3s;
+      }
+
+      .btn_contact span {
+        font-size: 18px;
+        transition: all 0.3s ease-in;
       }
 
       .icon_menu {
@@ -152,13 +198,11 @@ header {
           width: 100px;
         }
       }
-
+      .links {
+        display: none;
+      }
       .info {
         gap: 10px;
-
-        .links {
-          display: none;
-        }
 
         .lang_list {
           display: none;
@@ -181,4 +225,146 @@ header {
     }
   }
 }
+
+@media (max-width: 768px) {
+  .hero_section {
+    height: calc(100vh - 68px);
+    min-height: 100vh;
+
+    .container {
+      .line {
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+
+        > div {
+          width: 100%;
+        }
+
+        .left {
+          text-align: center;
+
+          .subtitle {
+            margin: auto;
+            padding: 1px 10px;
+            font-size: 13px;
+            margin-bottom: 5px;
+          }
+
+          .title {
+            font-size: 30px;
+          }
+
+          .desc {
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+
+          .btn_contact {
+            font-size: 14px;
+            padding: 5px 20px;
+          }
+        }
+
+        .right {
+          .image {
+            &::before {
+              width: 250px;
+              height: 250px;
+              top: 57%;
+            }
+
+            .icon {
+              img {
+                width: 50px;
+              }
+
+              &:nth-child(3) {
+                top: -25px;
+                right: 100px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 // end header
+
+// start head_page
+.head_page {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    height: 100%;
+  }
+
+  .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    img {
+      width: 450px;
+      opacity: 0.7;
+      filter: brightness(99%) contrast(101%) saturate(174%) blur(0px)
+        hue-rotate(0deg);
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+
+    .title {
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .path {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+
+      a {
+        font-size: 20px;
+        font-weight: 600;
+
+        &:last-child {
+          color: $primary-color !important;
+        }
+      }
+
+      i {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .head_page {
+    height: 150px;
+
+    .content {
+      .title {
+        font-size: 25px;
+      }
+
+      .path {
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+// end head_page
