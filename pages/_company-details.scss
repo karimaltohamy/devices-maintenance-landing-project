@@ -1,5 +1,6 @@
 @import "../components/variables";
 
+$size: 40px;
 // start about_section
 .about_section {
   padding: 70px 0 0;
@@ -500,3 +501,96 @@
   }
 }
 // end devices_sections_sections
+
+//  start why choose us section
+.why-choose-us {
+  margin-bottom: 100px;
+  overflow: hidden;
+  .container {
+    display: flex;
+    gap: 20px;
+    .half {
+      flex-basis: 50%;
+    }
+    .half1 {
+      background-image: url("../images/ai-generated-8650513_1920.jpg");
+      background-position: top;
+      background-size: cover;
+      border-radius: 10px;
+      position: relative;
+      .customer {
+        background-color: white;
+        position: absolute;
+        top: 20px;
+        right: -70px;
+        transform: rotate(-90deg);
+        width: fit-content;
+        z-index: 2000;
+        padding: 3px 40px;
+        color: $main-color;
+        h1 {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          i {
+            color: $Dark-blue;
+            font-size: 20px;
+          }
+        }
+        p {
+          color: $dddColor;
+        }
+      }
+    }
+    .half2 {
+      h3 {
+        font-size: 20px;
+        color: $primary-color;
+        i {
+          color: $Dark-blue;
+          font-size: 20px;
+        }
+      }
+      p {
+        color: $dddColor;
+      }
+      .flex {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .why-choose-us {
+    .container {
+      flex-direction: column;
+      .half {
+        flex-basis: 100%;
+        min-height: 400px;
+      }
+    }
+  }
+}
+//  end why choose us section
+
+// custom cursor
+.circle {
+  position: fixed;
+  height: $size;
+  width: $size;
+  box-shadow: 5px 5px 30px #0379ffb2;
+  border-radius: 50%;
+  top: $size / 2 * -1;
+  left: $size / 2 * -1;
+  pointer-events: none;
+  z-index: 999999999999999999999;
+}
+// custom cursor
