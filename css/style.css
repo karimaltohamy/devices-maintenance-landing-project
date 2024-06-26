@@ -762,6 +762,33 @@ footer .footer_bottom p {
     font-size: 17px;
   }
 }
+.special {
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  font-size: 24px;
+  width: 300px;
+  margin: 0 auto 20px auto;
+  background-color: #0379ff;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+body {
+  scrollbar-width: none;
+}
+
 .about_section {
   padding: 70px 0 0;
   overflow: hidden;
@@ -797,8 +824,9 @@ footer .footer_bottom p {
   }
 }
 .about_section .line .text .subtitle {
-  font-size: 24px;
+  display: block;
   color: #0379ff;
+  font-size: 24px;
 }
 @media (max-width: 768px) {
   .about_section .line .text .subtitle {
@@ -949,9 +977,7 @@ footer .footer_bottom p {
   color: white;
 }
 .services_section .head .subtitle {
-  font-size: 24px;
-  color: #0379ff;
-  font-weight: 600;
+  display: block;
 }
 @media (max-width: 768px) {
   .services_section .head .subtitle {
@@ -1239,9 +1265,7 @@ footer .footer_bottom p {
   text-align: center;
 }
 .devices_sections_section .head .subtitle {
-  font-size: 24px;
-  color: #0379ff;
-  font-weight: 600;
+  display: block;
 }
 @media (max-width: 768px) {
   .devices_sections_section .head .subtitle {
@@ -1309,7 +1333,7 @@ footer .footer_bottom p {
 }
 
 .why-choose-us {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 .why-choose-us .container {
   display: -webkit-box;
@@ -1401,8 +1425,8 @@ footer .footer_bottom p {
   position: fixed;
   height: 40px;
   width: 40px;
-  -webkit-box-shadow: 5px 5px 30px rgba(3, 121, 255, 0.6980392157);
-          box-shadow: 5px 5px 30px rgba(3, 121, 255, 0.6980392157);
+  -webkit-box-shadow: 0px 0px 40px #0379ff;
+          box-shadow: 0px 0px 40px #0379ff;
   border-radius: 50%;
   top: -20px;
   left: -20px;
@@ -1410,6 +1434,211 @@ footer .footer_bottom p {
   z-index: 1000000000000000000000;
 }
 
+.team {
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+  padding: 50px 0px;
+}
+.team .special {
+  margin-bottom: 40px;
+}
+.team .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.team .container .main {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.team .container .main img {
+  width: 100%;
+  border-radius: 10px;
+  height: 350px;
+}
+.team .container .swiper {
+  padding-top: 0 !important;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.team .container .swiper-slide {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.team .container .swiper-slide.swiper-slide-active {
+  -webkit-animation: move 2s linear infinite;
+          animation: move 2s linear infinite;
+}
+@-webkit-keyframes move {
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+@keyframes move {
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+.team .container .swiper-slide.swiper-slide-active .con {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.team .container .swiper-slide .con {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 153, 255, 0.423);
+  border-radius: 10px;
+  color: whitesmoke;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.team .container .swiper-slide .con h5,
+.team .container .swiper-slide .con p {
+  position: absolute;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.team .container .swiper-slide .con h5 {
+  bottom: 30px;
+  margin-left: 10px;
+}
+.team .container .swiper-slide .con p {
+  bottom: 0px;
+  margin-left: 10px;
+}
+.team .container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .team .container {
+    display: block;
+  }
+  .team .container .swiper {
+    margin-top: 20px;
+    height: 400px;
+  }
+}
+.comments {
+  margin-bottom: 50px;
+}
+.comments .container {
+  border: 1px solid #0379ff;
+  border-radius: 10px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.comments .container .img {
+  width: 40%;
+  height: 350px;
+}
+.comments .container .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.comments .container .swiper {
+  width: 60%;
+  height: 350px;
+  margin: 0;
+  position: relative;
+}
+.comments .container .swiper .swiper-pagination {
+  position: absolute;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 6px 10px;
+  height: 30px;
+  bottom: 0px;
+  right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #0379ff;
+  border-radius: 5px;
+}
+.comments .container .swiper .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 0;
+}
+.comments .container .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  border-radius: 50%;
+}
+.comments .container .swiper-slide > i {
+  font-size: 50px;
+  color: #0379ff;
+}
+.comments .container .swiper-slide .stars i {
+  color: orange;
+}
+.comments .container .swiper-slide p {
+  margin: 20px 0px;
+  color: #bbb5b5;
+}
+.comments .container .swiper-slide p span {
+  color: #0379ff;
+}
+.comments .container .swiper-slide .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.comments .container .swiper-slide .flex h4 {
+  color: #0379ff;
+}
+.comments .container .swiper-slide img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+  .comments {
+    padding: 0px 10px;
+  }
+  .comments .container {
+    display: block;
+  }
+  .comments .container .img {
+    width: 100%;
+  }
+  .comments .container .swiper {
+    margin-top: 20px;
+    width: 100%;
+  }
+}
 * {
   padding: 0;
   margin: 0;
