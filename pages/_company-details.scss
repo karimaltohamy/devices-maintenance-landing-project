@@ -5,11 +5,10 @@ $size: 40px;
 .special {
   text-align: center;
   text-transform: capitalize;
-  color: white;
+  color: $primary-color;
   font-size: 24px;
   width: 300px;
-  margin: 0 auto 20px auto;
-  background-color: $primary-color;
+  margin: 0 auto;
   padding: 10px 0px;
   border-radius: 10px;
 }
@@ -65,9 +64,10 @@ body {
       .title {
         font-size: 50px;
         font-weight: 700;
-
+        text-align: start;
         @media (max-width: 768px) {
           font-size: 30px;
+          text-align: center;
         }
       }
 
@@ -719,65 +719,67 @@ body {
     gap: 20px;
     .img {
       width: 40%;
-      height: 350px;
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 20px;
+      min-height: 370px;
+      max-height:370px;
+      background-image: url("../images/comments/people\ with\ beautiful\ smiles.jpeg");
+      background-size: cover;
+      border-radius: 10px;
+      animation: change-background 24s linear infinite;
+      @keyframes change-background {
+        15% {
+          background-image: url("../images/comments/people\ with\ beautiful\ smiles.jpeg");
+        }
+        25% {
+          background-image: url("../images/comments/Discover\ and\ download\ free\ images.jpeg");
+        }
+        45% {
+          background-image: url("../images/comments/6\ Major\ Shifts\ In\ Corporate\ Philanthropy\,\ New\ Report\ Finds.jpeg");
+        }
+        65% {
+          background-image: url("../images/comments/Who\ Can\ Become\ a\ Life\ Coach_.jpeg");
+        }
+        85% {
+          background-image: url("../images/comments/HOMEOPATHY\ PLUS.jpeg");
+        }
       }
     }
     .swiper {
       width: 60%;
-      height: 350px;
+      max-height:370px;
       margin: 0;
       position: relative;
-      .swiper-pagination{
-       position: absolute;
-       width: fit-content;
-       padding: 6px 10px;
-       height: 30px;
-       bottom: 0px;
-       right: 20px ;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       border: 1px solid $primary-color;
-       border-radius:5px;
-       .swiper-pagination-bullet{
-        width: 10px ;
-        height: 10px;
-        border-radius: 0;
-       }
-       .swiper-pagination-bullet-active{
-        border-radius: 50%;
-       }
+      .swiper-pagination {
+        display: none;
       }
     }
 
     .swiper-slide {
+      background-color: $primary-color;
+      border-radius: 10px;
+      box-shadow: 20px 20px 80px $primary-color;
+      padding: 20px;
+      max-height:370px;
+      color: white ;
       & > i {
         font-size: 50px;
-        color: $primary-color;
       }
-      .stars{
-        i{
-          color: orange ;
+      .stars {
+        margin-top: 20px;
+        i {
+          color: orange;
         }
       }
-      p{
+      p {
         margin: 20px 0px;
-        color: $dddColor;
-        span{
-          color: $primary-color;
-        }
       }
-      .flex{
+      span{
+        color: wheat;
+        font-weight: bold;
+      }
+      .flex {
         display: flex;
         gap: 20px;
         align-items: center;
-        h4{
-          color: $primary-color;
-        }
       }
     }
 
@@ -790,17 +792,22 @@ body {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .comments {
     padding: 0px 10px;
     .container {
       display: block;
-      .img{
+      .img {
         width: 100%;
+        min-height: 250px ;
       }
       .swiper {
         margin-top: 20px;
         width: 100%;
+        max-height: 400px;
+        .swiper-slide{
+          max-height: 400px;
+        }
       }
     }
   }

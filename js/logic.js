@@ -129,7 +129,7 @@ var swiper = new Swiper(".mySwiperCube", {
   effect: "cube",
   grabCursor: true,
   autoplay: {
-    delay: 3000,
+    delay: 6000,
     disableOnInteraction: false
   },
   loop : true ,
@@ -137,7 +137,7 @@ var swiper = new Swiper(".mySwiperCube", {
     shadow: true,
     slideShadows: true,
     shadowOffset: 0,
-    shadowScale: 0.54,
+    shadowScale: 0,
   },
   pagination: {
     el: ".swiper-pagination",
