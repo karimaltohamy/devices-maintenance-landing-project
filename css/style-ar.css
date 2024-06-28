@@ -2216,3 +2216,14 @@ main .shape_hero img {
             transform: scale(1);
   }
 }
+.hero_section .line .text .title_hero .typewriter {
+  border-right: unset;
+  border-left: 0.15em solid #0379ff;
+}
+
+.having_problem_section .line {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
