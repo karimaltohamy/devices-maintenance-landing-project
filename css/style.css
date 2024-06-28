@@ -993,6 +993,32 @@ footer .footer_bottom p {
     border-color: orange;
   }
 }
+.special {
+  text-align: center;
+  text-transform: capitalize;
+  color: #0379ff;
+  font-size: 24px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+body {
+  scrollbar-width: none;
+}
+
 .about_section {
   padding: 70px 0 0;
   overflow: hidden;
@@ -1028,8 +1054,9 @@ footer .footer_bottom p {
   }
 }
 .about_section .line .text .subtitle {
-  font-size: 24px;
+  display: block;
   color: #0379ff;
+  font-size: 24px;
 }
 @media (max-width: 768px) {
   .about_section .line .text .subtitle {
@@ -1039,10 +1066,12 @@ footer .footer_bottom p {
 .about_section .line .text .title {
   font-size: 50px;
   font-weight: 700;
+  text-align: start;
 }
 @media (max-width: 768px) {
   .about_section .line .text .title {
     font-size: 30px;
+    text-align: center;
   }
 }
 .about_section .line .text .desc {
@@ -1180,9 +1209,7 @@ footer .footer_bottom p {
   color: white;
 }
 .services_section .head .subtitle {
-  font-size: 24px;
-  color: #0379ff;
-  font-weight: 600;
+  display: block;
 }
 @media (max-width: 768px) {
   .services_section .head .subtitle {
@@ -1472,9 +1499,7 @@ footer .footer_bottom p {
   text-align: center;
 }
 .devices_sections_section .head .subtitle {
-  font-size: 24px;
-  color: #0379ff;
-  font-weight: 600;
+  display: block;
 }
 @media (max-width: 768px) {
   .devices_sections_section .head .subtitle {
@@ -1542,8 +1567,7 @@ footer .footer_bottom p {
 }
 
 .why-choose-us {
-  margin-bottom: 100px;
-  overflow: hidden;
+  margin-bottom: 50px;
 }
 .why-choose-us .container {
   display: -webkit-box;
@@ -1635,8 +1659,8 @@ footer .footer_bottom p {
   position: fixed;
   height: 40px;
   width: 40px;
-  -webkit-box-shadow: 5px 5px 30px rgba(3, 121, 255, 0.6980392157);
-          box-shadow: 5px 5px 30px rgba(3, 121, 255, 0.6980392157);
+  -webkit-box-shadow: 0px 0px 40px #0379ff;
+          box-shadow: 0px 0px 40px #0379ff;
   border-radius: 50%;
   top: -20px;
   left: -20px;
@@ -1644,6 +1668,233 @@ footer .footer_bottom p {
   z-index: 1000000000000000000000;
 }
 
+.team {
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+  padding: 50px 0px;
+}
+.team .special {
+  margin-bottom: 40px;
+}
+.team .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.team .container .main {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+.team .container .main img {
+  width: 100%;
+  border-radius: 10px;
+  height: 350px;
+}
+.team .container .swiper {
+  padding-top: 0 !important;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.team .container .swiper-slide {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.team .container .swiper-slide.swiper-slide-active {
+  -webkit-animation: move 2s linear infinite;
+          animation: move 2s linear infinite;
+}
+@-webkit-keyframes move {
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+@keyframes move {
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+.team .container .swiper-slide.swiper-slide-active .con {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.team .container .swiper-slide .con {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 153, 255, 0.423);
+  border-radius: 10px;
+  color: whitesmoke;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.team .container .swiper-slide .con h5,
+.team .container .swiper-slide .con p {
+  position: absolute;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.team .container .swiper-slide .con h5 {
+  bottom: 30px;
+  margin-left: 10px;
+}
+.team .container .swiper-slide .con p {
+  bottom: 0px;
+  margin-left: 10px;
+}
+.team .container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+  .team .container {
+    display: block;
+  }
+  .team .container .swiper {
+    margin-top: 20px;
+    height: 400px;
+  }
+}
+.comments {
+  margin-bottom: 50px;
+}
+.comments .container {
+  border: 1px solid #0379ff;
+  border-radius: 10px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+.comments .container .img {
+  width: 40%;
+  min-height: 370px;
+  max-height: 370px;
+  background-image: url("../images/comments/people with beautiful smiles.jpeg");
+  background-size: cover;
+  border-radius: 10px;
+  -webkit-animation: change-background 24s linear infinite;
+          animation: change-background 24s linear infinite;
+}
+@-webkit-keyframes change-background {
+  15% {
+    background-image: url("../images/comments/people with beautiful smiles.jpeg");
+  }
+  25% {
+    background-image: url("../images/comments/Discover and download free images.jpeg");
+  }
+  45% {
+    background-image: url("../images/comments/6 Major Shifts In Corporate Philanthropy, New Report Finds.jpeg");
+  }
+  65% {
+    background-image: url("../images/comments/Who Can Become a Life Coach_.jpeg");
+  }
+  85% {
+    background-image: url("../images/comments/HOMEOPATHY PLUS.jpeg");
+  }
+}
+@keyframes change-background {
+  15% {
+    background-image: url("../images/comments/people with beautiful smiles.jpeg");
+  }
+  25% {
+    background-image: url("../images/comments/Discover and download free images.jpeg");
+  }
+  45% {
+    background-image: url("../images/comments/6 Major Shifts In Corporate Philanthropy, New Report Finds.jpeg");
+  }
+  65% {
+    background-image: url("../images/comments/Who Can Become a Life Coach_.jpeg");
+  }
+  85% {
+    background-image: url("../images/comments/HOMEOPATHY PLUS.jpeg");
+  }
+}
+.comments .container .swiper {
+  width: 60%;
+  max-height: 370px;
+  margin: 0;
+  position: relative;
+}
+.comments .container .swiper .swiper-pagination {
+  display: none;
+}
+.comments .container .swiper-slide {
+  background-color: #0379ff;
+  border-radius: 10px;
+  -webkit-box-shadow: 20px 20px 80px #0379ff;
+          box-shadow: 20px 20px 80px #0379ff;
+  padding: 20px;
+  max-height: 370px;
+  color: white;
+}
+.comments .container .swiper-slide > i {
+  font-size: 50px;
+}
+.comments .container .swiper-slide .stars {
+  margin-top: 20px;
+}
+.comments .container .swiper-slide .stars i {
+  color: orange;
+}
+.comments .container .swiper-slide p {
+  margin: 20px 0px;
+}
+.comments .container .swiper-slide span {
+  color: wheat;
+  font-weight: bold;
+}
+.comments .container .swiper-slide .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.comments .container .swiper-slide img {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .comments {
+    padding: 0px 10px;
+  }
+  .comments .container {
+    display: block;
+  }
+  .comments .container .img {
+    width: 100%;
+    min-height: 250px;
+  }
+  .comments .container .swiper {
+    margin-top: 20px;
+    width: 100%;
+    max-height: 400px;
+  }
+  .comments .container .swiper .swiper-slide {
+    max-height: 400px;
+  }
+}
 * {
   padding: 0;
   margin: 0;

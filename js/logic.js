@@ -1,5 +1,5 @@
 // Select the circle element
-const circleElement = document.getElementById("test");
+const circleElement = document.getElementById("circle");
 // Create objects to track mouse position and custom cursor position
 const mouse = { x: 0, y: 0 }; // Track current mouse position
 const previousMouse = { x: 0, y: 0 }; // Store the previous mouse position
@@ -58,10 +58,91 @@ const tick = () => {
   // Request the next frame to continue the animation
   window.requestAnimationFrame(tick);
 };
-// display none when mouse out 
+// display none when mouse out
 window.addEventListener("mouseout", (e) => {
   circleElement.style.display = "none";
 });
-
 // Start the animation loop
 tick();
+
+// start team slider
+var swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false
+  },
+  loop : true ,
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+// start team slider
+
+// start hover text
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+let interval = null;
+
+document.querySelectorAll(".special").forEach((ele) => {
+  ele.onmouseover = (event) => {
+    let iteration = 0;
+
+    clearInterval(interval);
+
+    interval = setInterval(() => {
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if (index < iteration) {
+            return event.target.dataset.value[index];
+          }
+
+          return letters[Math.floor(Math.random() * 26)];
+        })
+        .join("");
+
+      if (iteration >= event.target.dataset.value.length) {
+        clearInterval(interval);
+      }
+
+      iteration += 1 / 3;
+    }, 70);
+  };
+});
+// end hover text
+
+
+// start Comments slider 
+var swiper = new Swiper(".mySwiperCube", {
+  effect: "cube",
+  grabCursor: true,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false
+  },
+  loop : true ,
+  cubeEffect: {
+    shadow: true,
+    slideShadows: true,
+    shadowOffset: 0,
+    shadowScale: 0,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+});
+// end Comments slider 

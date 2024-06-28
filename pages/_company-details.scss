@@ -1,6 +1,31 @@
 @import "../components/variables";
 
 $size: 40px;
+
+.special {
+  text-align: center;
+  text-transform: capitalize;
+  color: $primary-color;
+  font-size: 24px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px 0px;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+}
+
+body {
+  scrollbar-width: none;
+}
+
 // start about_section
 .about_section {
   padding: 70px 0 0;
@@ -28,9 +53,9 @@ $size: 40px;
         text-align: center;
       }
       .subtitle {
-        font-size: 24px;
+        display: block;
         color: $primary-color;
-
+        font-size: 24px;
         @media (max-width: 768px) {
           font-size: 18;
         }
@@ -39,9 +64,10 @@ $size: 40px;
       .title {
         font-size: 50px;
         font-weight: 700;
-
+        text-align: start;
         @media (max-width: 768px) {
           font-size: 30px;
+          text-align: center;
         }
       }
 
@@ -160,10 +186,7 @@ $size: 40px;
     color: white;
 
     .subtitle {
-      font-size: 24px;
-      color: $primary-color;
-      font-weight: 600;
-
+      display: block;
       @media (max-width: 768px) {
         font-size: 18px;
       }
@@ -430,10 +453,7 @@ $size: 40px;
     text-align: center;
 
     .subtitle {
-      font-size: 24px;
-      color: $primary-color;
-      font-weight: 600;
-
+      display: block;
       @media (max-width: 768px) {
         font-size: 18px;
       }
@@ -503,8 +523,7 @@ $size: 40px;
 
 //  start why choose us section
 .why-choose-us {
-  margin-bottom: 100px;
-  overflow: hidden;
+  margin-bottom: 50px;
   .container {
     display: flex;
     gap: 20px;
@@ -585,7 +604,7 @@ $size: 40px;
   position: fixed;
   height: $size;
   width: $size;
-  box-shadow: 5px 5px 30px #0379ffb2;
+  box-shadow: 0px 0px 40px $primary-color;
   border-radius: 50%;
   top: $size / 2 * -1;
   left: $size / 2 * -1;
@@ -593,3 +612,204 @@ $size: 40px;
   z-index: 999999999999999999999;
 }
 // custom cursor
+
+// start team
+
+.team {
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+  padding: 50px 0px;
+  .special {
+    margin-bottom: 40px;
+  }
+  .container {
+    display: flex;
+    gap: 20px;
+    .main {
+      flex-basis: 50%;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        height: 350px;
+      }
+    }
+    .swiper {
+      padding-top: 0 !important;
+      flex-basis: 50%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+      &.swiper-slide-active {
+        animation: move 2s linear infinite;
+        @keyframes move {
+          50% {
+            transform: translateY(20px);
+          }
+        }
+        .con {
+          transform: translateY(0%);
+        }
+      }
+
+      .con {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 153, 255, 0.423);
+        border-radius: 10px;
+        color: whitesmoke;
+        transform: translateY(-200%);
+        transition: 0.5s;
+        h5,
+        p {
+          position: absolute;
+          text-transform: capitalize;
+          font-weight: bold;
+        }
+        h5 {
+          bottom: 30px;
+          margin-left: 10px;
+        }
+        p {
+          bottom: 0px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .team {
+    .container {
+      display: block;
+      .swiper {
+        margin-top: 20px;
+        height: 400px;
+      }
+    }
+  }
+}
+
+// end team
+
+// start comments
+.comments {
+  margin-bottom: 50px;
+  .container {
+    border: 1px solid $primary-color;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    .img {
+      width: 40%;
+      min-height: 370px;
+      max-height:370px;
+      background-image: url("../images/comments/people\ with\ beautiful\ smiles.jpeg");
+      background-size: cover;
+      border-radius: 10px;
+      animation: change-background 24s linear infinite;
+      @keyframes change-background {
+        15% {
+          background-image: url("../images/comments/people\ with\ beautiful\ smiles.jpeg");
+        }
+        25% {
+          background-image: url("../images/comments/Discover\ and\ download\ free\ images.jpeg");
+        }
+        45% {
+          background-image: url("../images/comments/6\ Major\ Shifts\ In\ Corporate\ Philanthropy\,\ New\ Report\ Finds.jpeg");
+        }
+        65% {
+          background-image: url("../images/comments/Who\ Can\ Become\ a\ Life\ Coach_.jpeg");
+        }
+        85% {
+          background-image: url("../images/comments/HOMEOPATHY\ PLUS.jpeg");
+        }
+      }
+    }
+    .swiper {
+      width: 60%;
+      max-height:370px;
+      margin: 0;
+      position: relative;
+      .swiper-pagination {
+        display: none;
+      }
+    }
+
+    .swiper-slide {
+      background-color: $primary-color;
+      border-radius: 10px;
+      box-shadow: 20px 20px 80px $primary-color;
+      padding: 20px;
+      max-height:370px;
+      color: white ;
+      & > i {
+        font-size: 50px;
+      }
+      .stars {
+        margin-top: 20px;
+        i {
+          color: orange;
+        }
+      }
+      p {
+        margin: 20px 0px;
+      }
+      span{
+        color: wheat;
+        font-weight: bold;
+      }
+      .flex {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .comments {
+    padding: 0px 10px;
+    .container {
+      display: block;
+      .img {
+        width: 100%;
+        min-height: 250px ;
+      }
+      .swiper {
+        margin-top: 20px;
+        width: 100%;
+        max-height: 400px;
+        .swiper-slide{
+          max-height: 400px;
+        }
+      }
+    }
+  }
+}
+// end comments
