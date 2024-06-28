@@ -25,21 +25,41 @@
         font-weight: 700;
         font-size: 65px;
         text-align: start;
+        opacity: 0;
+        transition: transform 1700ms ease, opacity 1700ms ease;
+        transform: translateX(200px);
 
         span {
           color: $main-color;
+        }
+
+        .typewriter {
+          display: block;
+          width: fit-content;
+          overflow: hidden;
+          border-right: 0.15em solid $primary-color;
+          white-space: nowrap;
+          letter-spacing: 0.15em;
+          animation: typing 3.5s steps(30, end),
+            blink-caret 0.5s step-end infinite;
         }
       }
 
       .subtitle {
         font-size: 28px;
         font-weight: 700;
+        opacity: 0;
+        transition: transform 1700ms ease, opacity 1800ms ease;
+        transform: translateX(-200px);
       }
 
       .desc {
         color: gray;
         font-size: 20px;
         margin-bottom: 25px;
+        opacity: 0;
+        transform: translateY(100px);
+        transition: transform 1700ms ease, opacity 1800ms ease;
       }
 
       .btn_contact {
@@ -48,6 +68,9 @@
         padding: 7px 25px;
         border-radius: 50px;
         width: fit-content;
+        opacity: 0;
+        transition: transform 1700ms ease, opacity 1700ms ease;
+        transform: translateX(-200px);
 
         @media (max-width: 768px) {
           margin: auto;
@@ -82,8 +105,7 @@
           height: 350px;
         }
       }
-      .slider-thumb::before {
-      }
+
       @keyframes sliderShape {
         0%,
         100% {
@@ -101,6 +123,56 @@
           border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
           transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
         }
+      }
+    }
+  }
+
+  .owl-item.active {
+    .line {
+      .text {
+        .subtitle {
+          opacity: 1;
+          transform: translateX(0);
+          transition-delay: 1100ms;
+        }
+        .title_hero {
+          opacity: 1;
+          transform: translateX(0);
+          transition-delay: 1000ms;
+        }
+        .desc {
+          opacity: 1;
+          transform: translateY(0px);
+          transition-delay: 1700ms;
+        }
+
+        .btn_contact {
+          opacity: 1;
+          transform: translateX(0);
+          transition-delay: 1700ms;
+        }
+      }
+    }
+  }
+
+  .owl-dots {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .owl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgb(234, 234, 234);
+
+      &.active {
+        background-color: $primary-color;
       }
     }
   }
@@ -276,3 +348,24 @@
   }
 }
 // end all_companys_section
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
