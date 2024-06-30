@@ -311,3 +311,26 @@ main {
     transform: scale(1);
   }
 }
+
+// rtl style
+
+// hero section
+.hero_section {
+  .line {
+    .text {
+      .title_hero {
+        .typewriter {
+          border-right: unset;
+          border-left: 0.15em solid $primary-color;
+        }
+      }
+    }
+  }
+}
+
+// having_problem_section
+.having_problem_section {
+  .line {
+    flex-direction: row-reverse;
+  }
+}

@@ -13,15 +13,6 @@ $size: 40px;
   border-radius: 10px;
 }
 
-.title {
-  font-size: 50px;
-  font-weight: 700;
-  text-align: center;
-  @media (max-width: 768px) {
-    font-size: 30px;
-  }
-}
-
 body {
   scrollbar-width: none;
 }
@@ -711,6 +702,16 @@ body {
 // start comments
 .comments {
   margin-bottom: 50px;
+
+  .title {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+  }
+
   .container {
     border: 1px solid $primary-color;
     border-radius: 10px;
@@ -720,7 +721,7 @@ body {
     .img {
       width: 40%;
       min-height: 370px;
-      max-height:370px;
+      max-height: 370px;
       background-image: url("../images/comments/people\ with\ beautiful\ smiles.jpeg");
       background-size: cover;
       border-radius: 10px;
@@ -745,7 +746,7 @@ body {
     }
     .swiper {
       width: 60%;
-      max-height:370px;
+      max-height: 370px;
       margin: 0;
       position: relative;
       .swiper-pagination {
@@ -758,8 +759,8 @@ body {
       border-radius: 10px;
       box-shadow: 20px 20px 80px $primary-color;
       padding: 20px;
-      max-height:370px;
-      color: white ;
+      max-height: 370px;
+      color: white;
       & > i {
         font-size: 50px;
       }
@@ -772,7 +773,7 @@ body {
       p {
         margin: 20px 0px;
       }
-      span{
+      span {
         color: wheat;
         font-weight: bold;
       }
@@ -799,13 +800,13 @@ body {
       display: block;
       .img {
         width: 100%;
-        min-height: 250px ;
+        min-height: 250px;
       }
       .swiper {
         margin-top: 20px;
         width: 100%;
         max-height: 400px;
-        .swiper-slide{
+        .swiper-slide {
           max-height: 400px;
         }
       }

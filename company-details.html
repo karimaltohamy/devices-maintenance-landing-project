@@ -3,7 +3,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devices Maintenance</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
+    <link rel="stylesheet" href="./css/style-ar.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -47,8 +48,11 @@
             </div>
             <div class="links">
               <a href="index.html" class="link">Home</a>
-              <a href="blog.html" class="link">Blog</a>
-              <a href="contact-us.html" class="link">Contact Us</a>
+              <a href="#about-us" class="link">About Us</a>
+              <a href="#our-services" class="link">Our Services</a>
+              <a href="#why-choose-us" class="link">Wy Choose Us</a>
+              <a href="#our-team" class="link">Our Team</a>
+              <a href="#contact-us" class="link">Contact Us</a>
             </div>
             <div class="info">
               <button class="btn_contact btn_open">
@@ -167,7 +171,7 @@
     </section>
 
     <!--start about section  -->
-    <div class="about_section">
+    <div class="about_section" id="about-us">
       <div class="container">
         <div class="line">
           <div class="text">
@@ -273,7 +277,7 @@
     <!--start about section  -->
 
     <!-- start services section  -->
-    <div class="services_section">
+    <div class="services_section" id="our-services">
       <div class="container">
         <div class="head">
           <span class="subtitle special" data-value="OUR SERVICES">
@@ -370,7 +374,7 @@
     <!-- end services section  -->
 
     <!-- start having problem section -->
-    <div class="having_problem_section">
+    <div class="having_problem_section" id="contact-us">
       <div class="container">
         <div class="line">
           <div class="text">
@@ -416,7 +420,7 @@
     <!-- end having problem section -->
 
     <!-- start services section  -->
-    <div class="devices_sections_section">
+    <div class="devices_sections_section" id="our-sections">
       <div class="container">
         <div class="head">
           <span class="subtitle special" data-value="OUR SECTIONS"
@@ -495,7 +499,7 @@
     <!-- end services section  -->
 
     <!-- start why choose us section -->
-    <div class="why-choose-us">
+    <div class="why-choose-us" id="why-choose-us">
       <div class="container">
         <div
           class="half half1"
@@ -561,7 +565,7 @@
     <!-- end why choose us section -->
 
     <!-- our Team -->
-    <div class="team">
+    <div class="team" id="our-team">
       <h1 class="special" data-aos="fade-up" data-value="our team">our team</h1>
       <div class="container">
         <div class="main" data-aos="fade-right">
@@ -620,7 +624,7 @@
       <h1 class="special" data-aos="fade-down" data-value="TESTIMONIALS">
         TESTIMONIALS
       </h1>
-      <h3 class="title" data-aos="fade-up">
+      <h3 class="title text-center" data-aos="fade-up">
         What People Say About <br />
         Our Service
       </h3>
@@ -868,6 +872,7 @@
     <script src="js/carosuel.js"></script>
     <script>
       $(".owl-carousel").owlCarousel({
+        rtl: true,
         loop: true,
         margin: 15,
         responsiveClass: true,
