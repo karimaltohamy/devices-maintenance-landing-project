@@ -1,10 +1,9 @@
 @use "../components/header";
 @use "../components/footer";
-@use "../components/variables";
 @use "../components/modal";
 @use "../pages/index";
 @use "../pages/company-details";
-
+@import "../components/variables";
 $main-color: #0379ff;
 $primary-color: #0379ff;
 
@@ -331,6 +330,87 @@ main {
 // having_problem_section
 .having_problem_section {
   .line {
+    gap: 0px;
     flex-direction: row-reverse;
+    .title , .contact {
+      color: $Dark-blue;
+    }
+  }
+}
+
+
+// sevices sections 
+.services_section{
+  .boxs{
+    .box{
+      .image{
+        .icon{
+          right : 82% ;
+        }
+      }
+      
+    }
+  }
+}
+
+
+
+// devices_sections_section
+.devices_sections_section{
+  .boxs{
+    .box{
+      .num{
+        right: 85% ;
+      }
+    }
+  }
+}
+
+// team 
+.team{
+  .swiper-slide {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    &.swiper-slide-active {
+      animation: move 2s linear infinite;
+      @keyframes move {
+        50% {
+          transform: translateY(20px);
+        }
+      }
+      .con {
+        transform: translateY(0%);
+      }
+    }
+
+    .con {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 153, 255, 0.423);
+      border-radius: 10px;
+      color: whitesmoke;
+      transform: translateY(-200%);
+      transition: 0.5s;
+      h5,
+      p {
+        position: absolute;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+      h5 {
+        bottom: 30px;
+        margin-left: 10px;
+      }
+      p {
+        bottom: 0px;
+        margin-left: 10px;
+      }
+    }
   }
 }

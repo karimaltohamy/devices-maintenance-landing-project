@@ -73,9 +73,9 @@ var swiper = new Swiper(".mySwiper", {
   slidesPerView: "auto",
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
-  loop : true ,
+  loop: true,
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
@@ -123,16 +123,15 @@ document.querySelectorAll(".special").forEach((ele) => {
 });
 // end hover text
 
-
-// start Comments slider 
+// start Comments slider
 var swiper = new Swiper(".mySwiperCube", {
   effect: "cube",
   grabCursor: true,
   autoplay: {
     delay: 6000,
-    disableOnInteraction: false
+    disableOnInteraction: false,
   },
-  loop : true ,
+  loop: true,
   cubeEffect: {
     shadow: true,
     slideShadows: true,
@@ -143,6 +142,30 @@ var swiper = new Swiper(".mySwiperCube", {
     el: ".swiper-pagination",
     clickable: true,
   },
-
 });
-// end Comments slider 
+// end Comments slider
+
+// start sevices slider
+var swiper = new Swiper(".mySwiperPreview", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    900: {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    100 : {
+      slidesPerView: 1,
+    }
+
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+// end sevices slider
